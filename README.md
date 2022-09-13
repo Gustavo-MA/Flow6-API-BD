@@ -46,3 +46,20 @@ Para configurar la base de datos se debe configurarar nuestra entidad, indicar l
 ![image](https://user-images.githubusercontent.com/111370930/189792802-ed67548e-c0ee-455a-bd94-45daf0c797ae.png)
 
 Donde indicaremos el host, el puerto, el usuario y la contraseña anteriormente configuradas.
+Tambien configuramos nuestra funcion Query, para poder realizar las inserciones en nuestra base de datos: en esta pondremos las instrucciones:
+
+msg.topic="INSERT INTO clima(`Nombre`,`Temperatura`,`Humedad`) VALUES ('Gustavo',"+global.get("tempAPI") +","+global.get("humAPI")+");";
+
+return msg;
+![image](https://user-images.githubusercontent.com/111370930/189793240-50cb6ff5-ed11-40c0-9eba-ea3a5b1e6efa.png)
+
+RESULTADOS:
+
+Hacemos Deploy y por ultimo nos dirigimos a nuestra tabla para seleccionar los datos que se han insertado para visualizar los resultados.
+POdemos observar en la sigiuente imagen los resultados en consola que se insertaron  a nuestra tabla clima por medio de nuestro Flow6.
+En donde se muestran los datos insertados del clima obtenidos previamente del API del flow clonado y la fecha de registro en el cual se inserto
+el dato:
+![image](https://user-images.githubusercontent.com/111370930/189793688-1a96f80d-0f34-42c3-8d4e-9916e284b686.png)
+
+
+
