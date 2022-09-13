@@ -61,5 +61,11 @@ En donde se muestran los datos insertados del clima obtenidos previamente del AP
 el dato:
 ![image](https://user-images.githubusercontent.com/111370930/189793688-1a96f80d-0f34-42c3-8d4e-9916e284b686.png)
 
+Evidencias
 
+Repositorio github: https://github.com/Gustavo-MA/Flow5/blob/main/README.md
+
+Créditos
+
+Desarrollado por Gustavo Medina e-mail: gustavo.medina@uaem.edu.mx
 
