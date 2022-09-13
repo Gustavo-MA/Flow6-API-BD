@@ -1,0 +1,21 @@
+[
+    {
+        "id": "284f77fe48b3c9c3",
+        "type": "function",
+        "z": "49e957c40b183ef4",
+        "name": "Query",
+        "func": "msg.topic=\"INSERT INTO clima(`Nombre`,`Temperatura`,`Humedad`) VALUES ('Gustavo',\"+global.get(\"tempAPI\") +\",\"+global.get(\"humAPI\")+\");\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 1040,
+        "wires": [
+            [
+                "951b6dcadbcdc4fa"
+            ]
+        ]
+    }
+]
