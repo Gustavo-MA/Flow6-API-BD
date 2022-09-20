@@ -61,6 +61,66 @@ En donde se muestran los datos insertados del clima obtenidos previamente del AP
 el dato:
 ![image](https://user-images.githubusercontent.com/111370930/189793688-1a96f80d-0f34-42c3-8d4e-9916e284b686.png)
 
+
+GRAFANA
+Grafana es una interfaz que nos permite  vizualizar datos, en nuestro caso particular, los datos que existen en nuestra DB de clima anteriormente creada en nuestra base codigoIoT.
+
+Instalacion.
+
+- sudo apt-get install -y adduser libfontconfig1
+- wget https://dl.grafana.com/enterprise/release/grafana-enterprise_9.1.4_amd64.deb
+- sudo dpkg -i grafana-enterprise_9.1.4_amd64.deb
+
+Para arrancar por primera vez se teclea en la terminal:
+
+sudo /bin/systemctl daemon-reload
+- sudo /bin/systemctl enable grafana-server
+- sudo /bin/systemctl start grafana-server
+
+Para arrancar grafana:
+-- sudo /bin/systemctl start grafana-server
+
+Para abrir el entonrno de grafana ponermos en el navegador web:
+- localhost:3000
+
+Iniciar sesion
+- User: admin
+- Password: admin
+- Nueva contraseña: hugohugo
+
+Serealiza la configuracion en Graffana de la BD:
+
+
+Para poder agregar las graficas a nuestro dashboard de note-red se tiene el codigo embed de cada panel
+dando clic sobre compartir (share/embed) y coopiar el codigo se muestra,
+
+Y posteriormente copiar este codigo en: nodo Template en el Flow de NodeRed, en mi caso es:
+
+<iframe src="http://localhost:3000/d-solo/uS4153MVz/climaporapi?-orgId=1&from=1662996598509&to=1663082998509&panelId=2"width="1000" height="700" frameborder="0"></iframe>
+Ver captura de pantalla:
+
+
+tambien  tenemos que editar la configuracion de grafana para permitir la vizualizacio en el navegador configurando el archivo:
+ grafana.ini que se encuentra en /etc/grafana
+
+y descomentar y modificar la instruccion:
+
+- allow_embed = true
+
+
+
+Podemos vizualizar como ahora al realizar deploy en nuestro dashboard, se vizualizan los datos de Granada de los datos previos obtenidos de nuestra BD.
+
+
+Realizamos la misma accion para los nodos de temperatrua y clima repitiendo los pasos antertiores en grafana:
+
+Por ultimo podemos modificar la sentencia de los bloques where para que nos muestre solo los datos de algun usuario especifico en indicadores gauch,
+se muesrta la presentacion final de los dashboard con datos del embed de grafana:
+
+
+
+
+
 Evidencias
 
 Repositorio github:https://github.com/Gustavo-MA/Flow6-API-BD/blob/main/README.md
