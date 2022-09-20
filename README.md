@@ -89,37 +89,45 @@ Iniciar sesion
 - Nueva contraseña: hugohugo
 
 Serealiza la configuracion en Graffana de la BD:
+![image](https://user-images.githubusercontent.com/111370930/191144162-fcc225f6-2329-494b-962e-b81ddd84dd21.png)
 
+POdemos ver que se rea una grafica en la cual se tiene que establecer la fecha de las cuales se puedan grficar los datos en grafana:
+En mi caso yo escogi el estilo Bar chart, se le agrega un titulo y se guarda para posteriormente recuperar el codigo embed.
+
+![image](https://user-images.githubusercontent.com/111370930/191144379-0830ee50-0a59-488e-b330-05348519ef53.png)
 
 Para poder agregar las graficas a nuestro dashboard de note-red se tiene el codigo embed de cada panel
 dando clic sobre compartir (share/embed) y coopiar el codigo se muestra,
+![image](https://user-images.githubusercontent.com/111370930/191144546-c8766479-e840-480a-9799-68b0766a57cb.png)
 
 Y posteriormente copiar este codigo en: nodo Template en el Flow de NodeRed, en mi caso es:
 
 <iframe src="http://localhost:3000/d-solo/uS4153MVz/climaporapi?-orgId=1&from=1662996598509&to=1663082998509&panelId=2"width="1000" height="700" frameborder="0"></iframe>
 Ver captura de pantalla:
 
+![image](https://user-images.githubusercontent.com/111370930/191144587-97ef934c-f4f8-4e0a-8731-99ee040490b2.png)
 
-tambien  tenemos que editar la configuracion de grafana para permitir la vizualizacio en el navegador configurando el archivo:
+Tambien  tenemos que editar la configuracion de grafana para permitir la vizualizacio en el navegador configurando el archivo:
  grafana.ini que se encuentra en /etc/grafana
-
 y descomentar y modificar la instruccion:
 
 - allow_embed = true
 
+![image](https://user-images.githubusercontent.com/111370930/191144655-07aa6124-8610-4147-9688-12daefdc2727.png)
 
 
 Podemos vizualizar como ahora al realizar deploy en nuestro dashboard, se vizualizan los datos de Granada de los datos previos obtenidos de nuestra BD.
 
+![image](https://user-images.githubusercontent.com/111370930/191144756-638915cd-f23d-43dd-b08a-2610204473fc.png)
 
 Realizamos la misma accion para los nodos de temperatrua y clima repitiendo los pasos antertiores en grafana:
+
+![image](https://user-images.githubusercontent.com/111370930/191144793-67764419-4e67-45dc-bc83-e626e54e6851.png)
 
 Por ultimo podemos modificar la sentencia de los bloques where para que nos muestre solo los datos de algun usuario especifico en indicadores gauch,
 se muesrta la presentacion final de los dashboard con datos del embed de grafana:
 
-
-
-
+![image](https://user-images.githubusercontent.com/111370930/191144832-83d367d9-74cc-4ec3-ac6c-17b8a1ee7eca.png)
 
 Evidencias
 
